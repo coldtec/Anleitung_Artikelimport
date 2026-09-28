@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Anleitung Artikelimport</title>
+<style>
+:root{
+  --bg:#071017; --card:#101b26; --card2:#09131c; --text:#f4f7fb;
+  --muted:#a9c5d8; --border:#24384a; --cyan:#00e5e5; --green:#26e394;
+  --yellow:#ffd166;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.55}
+.wrap{max-width:900px;margin:auto;padding:42px 24px 70px}
+.tool-label{color:var(--cyan);font-size:13px;font-weight:800;letter-spacing:1.5px;margin-bottom:12px}
+h1{font-size:34px;margin:0 0 8px}
+.intro{color:var(--muted);margin:0 0 28px}
+.step{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px;margin:14px 0}
+.stephead{display:flex;gap:14px;align-items:center;margin-bottom:13px}
+.nr{width:36px;height:36px;min-width:36px;border-radius:50%;display:grid;place-items:center;background:var(--cyan);color:#041015;font-weight:900}
+h2{font-size:19px;margin:0}
+p{margin:8px 0}
+ul{margin:8px 0 0 20px;padding:0}
+li{margin:5px 0}
+.notice{margin-top:14px;background:var(--card2);border-left:3px solid var(--yellow);padding:12px 14px;border-radius:7px;color:#dce8f1}
+.ok{border-left-color:var(--green)}
+a{color:var(--cyan);font-weight:700;text-decoration:none}
+a:hover{text-decoration:underline}
+.path{font-family:Consolas,monospace;color:#cfe6f4;word-break:break-all}
+.tag{display:inline-block;margin-left:8px;font-size:11px;color:var(--yellow);border:1px solid #66552b;border-radius:20px;padding:2px 8px;vertical-align:2px}
+.footer{text-align:center;color:#71899a;font-size:12px;margin-top:24px}
+@media(max-width:600px){.wrap{padding:28px 16px 50px}h1{font-size:29px}.step{padding:18px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="tool-label">COLDTEC ANLEITUNG</div>
+  <h1>Artikelimport</h1>
+  <p class="intro">Vom vorbereiteten Excel bis zum Artikelimport und den Medien.</p>
+
+  <section class="step">
+    <div class="stephead"><div class="nr">1</div><h2>Excel-Datei vorbereiten</h2></div>
+    <p>Die Datei <b>Vorlage Artikelimport</b> fertig ausfüllen</b> und als Excel-Datei speichern.</p>
+    <ul>
+      <li>Artikelnummern in <b>Spalte A und Z</b> müssen gefüllt sein.</li>
+      <li>Prüfen, ob alle benötigten <b>Marken und Artikelgruppen</b> vorhanden sind.</li>
+      <li><b>Artikelliste</b> muss überall auf <b>JA</b> stehen.</li>
+      <li>Kontrollieren, ob alle weiteren notwendigen Felder ausgefüllt sind.</li>
+    </ul>
+  </section>
+
+  <section class="step">
+    <div class="stephead"><div class="nr">2</div><h2>Exportdateien erstellen</h2></div>
+    <p><a href="https://coldtec.github.io/Artikelimport/" target="_blank" rel="noopener">COLDTEC Artikelimport-Tool öffnen</a> und die vorbereitete Excel-Datei einfügen.</p>
+    <p>Danach <b>alle Exportdateien herunterladen</b> und lokal speichern.</p>
+    <div class="notice"><b>Secomp:</b> Die Datei <b>GP_Kat_Nr.xlsx</b> wird nur für Secomp-Artikel benötigt.</div>
+  </section>
+
+  <section class="step">
+    <div class="stephead"><div class="nr">3</div><h2>Artikel in SAP importieren</h2></div>
+    <p>In SAP öffnen: <b>Administration → Datenimport → Aus Excel importieren</b>.</p>
+    <ul>
+      <li>Oben <b>Artikel</b> auswählen.</li>
+      <li>Unten rechts auf die <b>drei Punkte</b> klicken.</li>
+      <li>Doppelklick auf <b>„1“</b>.</li>
+      <li>Oben bei den drei Punkten die Datei <b>SAP_Artikelstamm.txt</b> auswählen.</li>
+      <li>Nur <b>„Neue Datensätze hinzufügen, ohne vorhandene zu aktualisieren“</b> aktivieren.</li>
+      <li>Alle anderen Optionen abwählen.</li>
+    </ul>
+    <div class="notice ok"><b>Danach: Importieren.</b></div>
+  </section>
+
+  <section class="step">
+    <div class="stephead"><div class="nr">4</div><h2>GP-Katalognummern importieren</h2></div>
+    <p>Erneut <b>Aus Excel importieren</b> öffnen.</p>
+    <ul>
+      <li>Oben <b>Geschäftspartnerkatalognummern</b> auswählen.</li>
+      <li>Unten rechts auf die <b>drei Punkte</b> klicken.</li>
+      <li>Doppelklick auf <b>„2“</b>.</li>
+      <li>Oben bei den drei Punkten <b>SAP_GP_Kat_Nr.txt</b> auswählen.</li>
+    </ul>
+    <div class="notice ok"><b>Danach: Importieren.</b></div>
+  </section>
+
+  <section class="step">
+    <div class="stephead"><div class="nr">5</div><h2>Artikelordner in SharePoint erstellen</h2></div>
+    <p>Die heruntergeladene Datei <b>Ordner SharePoint.xlsx</b> ist im Verzeichnis? Wenn ja; <b>„Ordner erstellen“</b> per Doppelklick starten.</p>
+  </section>
+
+  <section class="step">
+    <div class="stephead"><div class="nr">6</div><h2>Secomp-Medien speichern <span class="tag">NUR SECOMP</span></h2></div>
+    <p><a href="https://coldtec.github.io/bilder/" target="_blank" rel="noopener">COLDTEC SECOMP Medien Tool öffnen</a>.</p>
+    <p>Folgende Dateien einfügen:</p>
+    <ul>
+      <li><b>GP_Kat_Nr.xlsx</b></li>
+      <li><b>MediaData_secomp.csv</b></li>
+    </ul>
+    <div class="notice">Die aktuellste Datei <b>MediaData_secomp.csv</b> findest du hier:<br><span class="path">\\srv102\Datenaustausch\Secomp\download</span></div>
+    <p>Wenn beide Dateien erfolgreich eingelesen wurden, den Ordner <b>„Artikel“</b> auswählen. Prüfen, ob die Artikel erkannt wurden, und anschliessend <b>„Medien speichern“</b> wählen.</p>
+  </section>
+
+  <div class="footer">COLDTEC · Artikelimport</div>
+</div>
+</body>
+</html>
