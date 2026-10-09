@@ -18,6 +18,17 @@ h1{font-size:34px;margin:0 0 8px}
 .intro{color:var(--muted);margin:0 0 28px}
 .step{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px;margin:14px 0}
 .stephead{display:flex;gap:14px;align-items:center;margin-bottom:13px}
+.info-einkauf{
+  margin-left:auto;
+  background:#fff3c4;
+  color:#665000;
+  border:1px solid #e6cb69;
+  border-radius:8px;
+  padding:6px 12px;
+  font-size:12px;
+  font-weight:700;
+  text-align:center;
+}
 .nr{width:36px;height:36px;min-width:36px;border-radius:50%;display:grid;place-items:center;background:var(--cyan);color:#041015;font-weight:900}
 h2{font-size:19px;margin:0}
 p{margin:8px 0}
@@ -40,7 +51,11 @@ a:hover{text-decoration:underline}
   <p class="intro">Vom vorbereiteten Excel bis zum Artikelimport und den Medien.</p>
 
   <section class="step">
-    <div class="stephead"><div class="nr">1</div><h2>Excel-Datei vorbereiten</h2></div>
+    <div class="stephead">
+  <div class="nr">1</div>
+  <h2>Excel-Datei vorbereiten</h2>
+  <div class="info-einkauf">ⓘ Wird vom Einkauf ausgefüllt</div>
+</div>
     <p>Die Datei <b>Vorlage Artikelimport</b> fertig ausfüllen</b> und als Excel-Datei speichern.</p>
     <ul>
       <li>Artikelnummern in <b>Spalte A und Z</b> müssen gefüllt sein.</li>
@@ -85,7 +100,7 @@ a:hover{text-decoration:underline}
 
   <section class="step">
     <div class="stephead"><div class="nr">5</div><h2>Artikelordner in SharePoint erstellen</h2></div>
-    <p>Die heruntergeladene Datei <b>Ordner SharePoint.xlsx</b> ist in folgendem Verzeichnis: \\srv102\Datenaustausch\ZZ_Scripts\Artikel erstellen </p> Wenn ja; <b>„Ordner erstellen“</b> per Doppelklick starten. <b>Wichtig: Beim zz_Skript_Automatische Ordnererstellung muss ganz oben der richtige Pfad des Users drin sein.</b></p>
+    <p>Die heruntergeladene Datei <b>Ordner SharePoint.xlsx</b> ist in folgendem Verzeichnis: \\srv102\Datenaustausch\ZZ_Scripts\Artikel erstellen </p> Wenn ja; <b>„Ordner erstellen“</b> per Doppelklick starten. <b>Wichtig: Beim zz_Skript_Automatische Ordnererstellung muss ganz oben der richtige Pfad des Users drin sein. (Ordner Artikel muss synchronisiert sein).</b></p>
   </section>
 
   <section class="step">
